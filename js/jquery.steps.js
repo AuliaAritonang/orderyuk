@@ -439,7 +439,7 @@ function($, undefined) {
      * @param index {Integer} The position (zero-based) to route to
      * @return {Boolean} Indicates whether the action succeeded or failed
      **/
-    function goToStep(wizard, options, state, index) {
+    goToStep(wizard, options, state, index) {
         if (index < 0 || index >= state.stepCount) {
             throwError(_indexOutOfRangeErrorMessage);
         }

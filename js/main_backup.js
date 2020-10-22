@@ -19,7 +19,7 @@ $(document).ready(function() {
             finish: '<i class="zmdi zmdi-arrow-right"></i>',
             current: ''
         },
-        onStepChanging: function(event, currentIndex, newIndex) {
+        onStepChanging: (event, currentIndex, newIndex) {
             if (currentIndex === 0) {
                 var load = '';
 

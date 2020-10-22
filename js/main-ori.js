@@ -1,8 +1,8 @@
-$(function(){
+$(function() {
     $("#form-register").validate({
         rules: {
-            password : {
-                required : true,
+            password: {
+                required: true,
             },
             confirm_password: {
                 equalTo: "#password"
@@ -31,15 +31,15 @@ $(function(){
         // enableAllSteps: true,
         autoFocus: true,
         transitionEffectSpeed: 500,
-        titleTemplate : '<div class="title">#title#</div>',
+        titleTemplate: '<div class="title">#title#</div>',
         labels: {
-            previous : 'Back',
+            previous: 'Back',
             // previous : '<i class="zmdi zmdi-arrow-left"></i>',
-            next : '<i class="zmdi zmdi-arrow-right"></i>',
-            finish : '<i class="zmdi zmdi-arrow-right"></i>',
-            current : ''
+            next: '<i class="zmdi zmdi-arrow-right"></i>',
+            finish: '<i class="zmdi zmdi-arrow-right"></i>',
+            current: ''
         },
-        onStepChanging: function (event, currentIndex, newIndex) { 
+        onStepChanging: (event, currentIndex, newIndex) {
             var username = $('#username').val();
             var email = $('#email').val();
             var cardtype = $('#card-type').val();
