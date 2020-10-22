@@ -14,7 +14,6 @@ $(document).ready(function() {
         transitionEffectSpeed: 500,
         titleTemplate: '<div class="title">#title#</div>',
         labels: {
-            previous: 'Back',
             previous: '<i class="zmdi zmdi-arrow-left"></i>',
             next: '<i class="zmdi zmdi-arrow-right"></i>',
             finish: '<i class="zmdi zmdi-arrow-right"></i>',
