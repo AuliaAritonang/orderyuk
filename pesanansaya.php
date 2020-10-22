@@ -76,7 +76,7 @@ while ($ambil = mysqli_fetch_array($tampil)) {
   <td><?php echo $no;?></td>
   <td><?php echo $ambil['nama_produk'];?></td>
   <td><?php echo $ambil['nama_bahan'];?></td>
-  <td><?php echo $ambil['tgl_kirim'];?></td>
+  <td><?php echo ambil['tgl_kirim'];?></td>
   <td>Rp</td> 
   <td><?php echo number_format($harga_total);?></td> 
   <td>
@@ -84,8 +84,8 @@ while ($ambil = mysqli_fetch_array($tampil)) {
     
     if ($ambil['gambar_dp'] != 'Belum mengirim dp'){
       echo "<img src='gambar_dp/";
-      echo $ambil['gambar_dp'];
-      echo "' width='150'>";
+      echo ambil['gambar_dp'];
+      echo " width='150'>";
     } else{
       echo "Bukti Transaksi belum di-upload";
     }

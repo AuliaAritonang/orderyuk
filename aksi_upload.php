@@ -1,7 +1,7 @@
 <?php 
 include 'koneksi.php';
-   if($_POST['upload']){
-   	$id_pesan = $_POST['id_pesan'];
+   if(POST['upload']){
+   	$id_pesan = POST['id_pesan'];
 	$ekstensi_diperbolehkan	= array('png','jpg');
 	$gambar_dp = $_FILES['file']['name'];
 	$x = explode('.', $gambar_dp);

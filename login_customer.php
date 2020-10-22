@@ -9,7 +9,7 @@
 	<!-- <h1>Login</h1> -->
 
 	<?php 
-	if(isset($_GET['pesan'])){
+	if(isset(GET['pesan'])){
 		if($_GET['pesan']=="gagal"){
 			echo "<div class='alert'>Username dan Password tidak sesuai !</div>";
 		}

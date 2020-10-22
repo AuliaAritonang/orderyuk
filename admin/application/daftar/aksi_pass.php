@@ -21,9 +21,9 @@ header("location:admin/index.php");
   //proses jika tombol rubah di klik
   if(isset($_POST['ubah'])){
     //membuat variabel untuk menyimpan data inputan yang di isikan di form
-    $password_lama      = $_POST['password_lama'];
+    $password_lama      = POST['password_lama'];
     $password_baru      = POST['password_baru'];
-    $konfirmasi_password  = $_POST['konfirmasi_password'];
+    $konfirmasi_password  = POST['konfirmasi_password'];
     $cek      = mysqli_query($conn,"SELECT password FROM user WHERE password='$password_lama'");
     
     if($cek->num_rows){
