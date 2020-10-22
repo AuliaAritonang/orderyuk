@@ -13,10 +13,10 @@ $d = mysqli_query($db, "SELECT * FROM pemesanan JOIN produk ON pemesanan.id_prod
 while ($data = mysqli_fetch_array($d)) {
   ?>
   <input type="hidden" name="id_pesan" value="<?php echo $id_pesan; ?>">
-  <input type="hidden" name="id_ukuran" value="<?php echo $data['id_ukuran']; ?>">
-  <input type="hidden" name="id_user" value="<?php echo $data['id_user']; ?>">
-  <input type="hidden" name="id_produk" value="<?php echo $data['id_produk']; ?>">
-  <input type="hidden" name="id_bahan" value="<?php echo $data['id_bahan']; ?>">
+  <input type="hidden" name="id_ukuran" value="<?php echo data['id_ukuran']; ?>">
+  <input type="hidden" name="id_user" value="<?php echo data['id_user']; ?>">
+  <input type="hidden" name="id_produk" value="<?php echo data['id_produk']; ?>">
+  <input type="hidden" name="id_bahan" value="<?php echo data['id_bahan']; ?>">
   
             <div class="form-group">
                 <label for="nama" class="col-form-label">Nama Pelanggan</label>
