@@ -2,12 +2,12 @@
 	include("koneksi.php");
 	session_start();
 
-	$id_produk = $_POST['id_produk_1'];
-	$id_bahan = $_POST['id_bahan_1'];
+	$id_produk = POST['id_produk_1'];
+	$id_bahan = POST['id_bahan_1'];
 
 	//section 1
-	$produk = $_POST['produk']; //array
-	$bahan = $_POST['id_bahan_1']; //array
+	$produk = POST['produk']; //array
+	$bahan = POST['id_bahan_1']; //array
 
 	//section 2
 	$desain=$_FILES['desain']; //array
@@ -19,16 +19,16 @@
 	$keterangan = POST['keterangan'];
 
 	//section 3
-	$nama = $_POST['nama']; //tabel user
-	$email = $_POST['email']; //tabel user
-	$telp = $_POST['telp']; //tabel user
-	$nama = $_POST['nama'];
-	$email = $_POST['email'];
-	$telp = $_POST['telp'];
-	$alamat = $_POST['alamat'];
-	$kota = $_POST['kota'];
-	$provinsi = $_POST['provinsi'];
-	$kodepos = $_POST['kodepos'];
+	$nama = POST['nama']; //tabel user
+	$email = POST['email']; //tabel user
+	$telp = POST['telp']; //tabel user
+	$nama = POST['nama'];
+	$email = POST['email'];
+	$telp = POST['telp'];
+	$alamat = POST['alamat'];
+	$kota = POST['kota'];
+	$provinsi = POST['provinsi'];
+	$kodepos = POST['kodepos'];
 	$tgl_kirim = date('Y-m-d H:i:s');
 	$tgl_selesai = date('Y-m-d H:i:s');
 	//$ket= $_POST['ket'];

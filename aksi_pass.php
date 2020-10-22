@@ -21,11 +21,11 @@ header("location:index.php");
   }
   
   //proses jika tombol rubah di klik
-  if(isset($_POST['ubah'])){
+  if(isset(POST['ubah'])){
     //membuat variabel untuk menyimpan data inputan yang di isikan di form
-    $password_lama      = $_POST['password_lama'];
+    $password_lama      = POST['password_lama'];
     $password_baru      = POST['password_baru'];
-    $konfirmasi_password  = $_POST['konfirmasi_password'];
+    $konfirmasi_password  = POST['konfirmasi_password'];
     
     //cek dahulu ke database dengan query SELECT
     //kondisi adalah WHERE (dimana) kolom password adalah $password_lama di encrypt m5

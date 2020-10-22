@@ -2,15 +2,15 @@
 //include('dbconnected.php');
 include('../koneksi.php');
 // var_dump($sql);
-$id_pesan = $_POST['id_pesan'];
+$id_pesan = POST['id_pesan'];
 if (isset($_POST['simpan'])) {
-$id_ukuran = $_POST['id_ukuran'];
-$id_user = $_POST['id_user'];
+$id_ukuran = POST['id_ukuran'];
+$id_user = POST['id_user'];
 $id_produk = POST['id_produk'];
-$nama = $_POST['nama'];
+$nama = POST['nama'];
 // $bahan = $_POST['bahan'];
 $id_bahan = POST['id_bahan'];
-$tgl_selesai = $_POST['tgl_kirim'];
+$tgl_selesai = POST['tgl_kirim'];
 $status = POST['status'];
 
 //query update

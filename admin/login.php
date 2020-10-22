@@ -4,9 +4,9 @@ session_start();
 $koneksi = mysqli_connect('localhost','root','', 'db_konveksi');
 
 // PROSES LOGIN
-if($_POST['login']){
-	$username	= $_POST['username'];
-	$password	= $_POST['password'];
+if(POST['login']){
+	$username	= POST['username'];
+	$password	= POST['password'];
  
 	if($username && $password){
 		$cek_db	= "SELECT * FROM user WHERE username='$username' and password='$password'";
