@@ -11,12 +11,12 @@
 
 	//section 2
 	$desain=$_FILES['desain']; //array
-	$ukurans = $_POST['new_s']; //array //tabel: ukuran
-	$ukuranm = $_POST['new_m']; //array //tabel: ukuran
-	$ukuranl = $_POST['new_l']; //array //tabel: ukuran
-	$ukuranxl = $_POST['new_xl']; //array //tabel: ukuran
-	$ukuranxxl = $_POST['new_xxl']; //array //tabel: ukuran
-	$keterangan = $_POST['keterangan'];
+	$ukurans = POST['new_s']; //array //tabel: ukuran
+	$ukuranm = POST['new_m']; //array //tabel: ukuran
+	$ukuranl = POST['new_l']; //array //tabel: ukuran
+	$ukuranxl = POST['new_xl']; //array //tabel: ukuran
+	$ukuranxxl = POST['new_xxl']; //array //tabel: ukuran
+	$keterangan = POST['keterangan'];
 
 	//section 3
 	$nama = $_POST['nama']; //tabel user

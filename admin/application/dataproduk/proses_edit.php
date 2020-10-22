@@ -2,7 +2,7 @@
 include '../koneksi.php'; 
 
 
-if (isset($_POST['simpan'])) {
+if (isset(POST['simpan'])) {
     $id_bahan    = $_GET['id'];
     $nama_produk = $_POST['nama_produk'];
     $nama_bahan  = $_POST['nama_bahan'];

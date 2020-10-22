@@ -8,7 +8,7 @@ $id_ukuran = $_POST['id_ukuran'];
 $id_user = $_POST['id_user'];
 $id_produk = $_POST['id_produk'];
 $nama = $_POST['nama'];
-$email = $_POST['email'];
+$email = POST['email'];
 $telp = $_POST['telp'];
 $alamat = $_POST['alamat'];
 $produk = $_POST['produk'];
@@ -16,9 +16,9 @@ $produk = $_POST['produk'];
 $id_bahan = $_POST['id_bahan'];
 $small = $_POST['small'];
 $medium = $_POST['medium'];
-$large = $_POST['large'];
-$exlarge = $_POST['exlarge'];
-$exexlarge = $_POST['exexlarge'];
+$large = POST['large'];
+$exlarge = POST['exlarge'];
+$exexlarge = POST['exexlarge'];
 $ket = $_POST['ket'];
 
 //query update

@@ -6,12 +6,12 @@ $id_pesan = $_POST['id_pesan'];
 if (isset($_POST['simpan'])) {
 $id_ukuran = $_POST['id_ukuran'];
 $id_user = $_POST['id_user'];
-$id_produk = $_POST['id_produk'];
+$id_produk = POST['id_produk'];
 $nama = $_POST['nama'];
 // $bahan = $_POST['bahan'];
-$id_bahan = $_POST['id_bahan'];
+$id_bahan = POST['id_bahan'];
 $tgl_selesai = $_POST['tgl_kirim'];
-$status = $_POST['status'];
+$status = POST['status'];
 
 //query update
 	// $sql ="UPDATE pemesanan SET id_user='$id_user',id_produk='$id_produk',id_bahan='$id_bahan',id_ukuran='$id_ukuran',nama='$nama',email='$email',telp='$telp',alamat='$alamat',kota='$kota',provinsi='$provinsi',kodepos='$kodepos',gambar='$gambar',tgl_kirim='$tgl_kirim',tgl_selesai='$tgl_selesai',ket='$ket',status='$status',gambar_dp='$gambar_dp',gambar_lunas='$gambar_lunas' WHERE id_pesan= '$id_pesan' ";
