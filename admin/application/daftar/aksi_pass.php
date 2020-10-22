@@ -22,13 +22,8 @@ header("location:admin/index.php");
   if(isset($_POST['ubah'])){
     //membuat variabel untuk menyimpan data inputan yang di isikan di form
     $password_lama      = $_POST['password_lama'];
-    $password_baru      = $_POST['password_baru'];
+    $password_baru      = POST['password_baru'];
     $konfirmasi_password  = $_POST['konfirmasi_password'];
-    
-    //cek dahulu ke database dengan query SELECT
-    //kondisi adalah WHERE (dimana) kolom password adalah $password_lama di encrypt m5
-    //encrypt -> md5($password_lama)
-    // $password_lama  = $password_lama;
     $cek      = mysqli_query($conn,"SELECT password FROM user WHERE password='$password_lama'");
     
     if($cek->num_rows){
@@ -42,7 +37,7 @@ header("location:admin/index.php");
           //query UPDATE SET password = mengtur password_baru
           //kondisi WHERE id user = session id pada saat login, maka yang di ubah hanya user dengan id tersebut
           // $password_baru  = $password_baru;
-          $username    = $_SESSION['username']; //ini dari session saat login
+          $username    =  session_get['username']; //ini dari session saat login
           
           $update     = mysqli_query($conn, "UPDATE user SET password='$password_baru' WHERE username='$username'");
           if($update){
