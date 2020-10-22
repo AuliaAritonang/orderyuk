@@ -14,7 +14,7 @@ include '../koneksi.php';
       $d = mysqli_query($db, "SELECT * FROM `bahan` JOIN `produk` ON `bahan`.`id_produk`=`produk`.`id_produk` WHERE `bahan`.`id_bahan`= '$id_bahan'");
       while ($data = mysqli_fetch_array($d)) {
     ?>
-      <form action="index.php?p=dataproduk/proses_edit.php&id=<?php echo htmlspecialchars ($_POST['id_bahan']); ?>
+      <form action="index.php?p=dataproduk/proses_edit.php&id=<?php echo $id_bahan; ?>" method="post">
           <div class="form-group">
               <label for="nama_produk">Nama Produk</label>
               <input id="nama_produk" type="text" readonly class="form-control" name="nama_produk" value="<?php echo $data['nama_produk']; ?>">
