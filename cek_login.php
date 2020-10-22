@@ -3,7 +3,7 @@
 session_start();
 
 // menghubungkan php dengan koneksi database
-include 'koneksi.php';
+require 'koneksi.php';
 
 // menangkap data yang dikirim dari form login
 $username = POST['username'];

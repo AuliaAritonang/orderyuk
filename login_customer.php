@@ -10,7 +10,7 @@
 
 	<?php 
 	if(isset(GET['pesan'])){
-		if($_GET['pesan']=="gagal"){
+		if(GET['pesan']=="gagal"){
 			echo "<div class='alert'>Username dan Password tidak sesuai !</div>";
 		}
 	}

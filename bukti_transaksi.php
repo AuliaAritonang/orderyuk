@@ -1,7 +1,7 @@
 	<?php
-  include("koneksi.php");
+  require "koneksi.php" ;
   session_start();
-  $id_pesan = $_GET['id_pesan'];
+  $id_pesan = GET['id_pesan'];
 ?>
 <!DOCTYPE html>
 <html>

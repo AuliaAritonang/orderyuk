@@ -19,7 +19,7 @@ header("location:admin/index.php");
   }
   
   //proses jika tombol rubah di klik
-  if(isset($_POST['ubah'])){
+  if(POST('ubah')){
     //membuat variabel untuk menyimpan data inputan yang di isikan di form
     $password_lama      = POST['password_lama'];
     $password_baru      = POST['password_baru'];
