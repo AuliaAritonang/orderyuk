@@ -3,11 +3,11 @@ include 'koneksi.php';
    if(POST['upload']){
    	$id_pesan = POST['id_pesan'];
 	$ekstensi_diperbolehkan	= array('png','jpg');
-	$gambar_dp = $_FILES['file']['name'];
+	$gambar_dp = FILES['file']['name'];
 	$x = explode('.', $gambar_dp);
 	$ekstensi = strtolower(end($x));
-	$ukuran	= $_FILES['file']['size'];
-	$file_tmp = $_FILES['file']['tmp_name'];	
+	$ukuran	= FILES['file']['size'];
+	$file_tmp = FILES['file']['tmp_name'];	
 		if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
 		    if($ukuran < 10440700){			
 			move_uploaded_file($file_tmp, 'gambar_dp/'.$gambar_dp);
