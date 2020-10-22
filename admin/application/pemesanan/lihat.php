@@ -13,62 +13,62 @@ include '../koneksi.php';
             <h2 align="center">Lihat Pemesanan</h2>
                             <div class="form-group">
                 <label for="tgl_kirim">Tanggal Pesan</label>
-                    <input id="tgl_kirim" type="text" readonly="" class="form-control" name="produk" value="<?php echo ambil['tgl_kirim']; ?>">
+                    <input id="tgl_kirim" type="text" readonly="" class="form-control" name="produk" value="<?php echo $ambil['tgl_kirim']; ?>">
                 </div>
 
             <div class="form-group">
                 <label for="nama" >Nama Pemesan</label>
-                     <input readonly="" id="nama" type="text" class="form-control" name="nama" value="<?php echo ambil['nama']; ?>">
+                     <input readonly="" id="nama" type="text" class="form-control" name="nama" value="<?php echo $ambil['nama']; ?>">
                 </div>
             
             <div class="form-group ">
                 <label for="alamat" >Alamat Kirim</label>
-                    <input id="alamat" class="form-control" readonly="" type="text" value="<?php echo ambil['alamat']; ?>">
+                    <input id="alamat" class="form-control" readonly="" type="text" value="<?php echo $ambil['alamat']; ?>">
                 </div>
             
                 <div class="form-group ">
                 <label for="kota" >Kota</label>
-                    <input id="kota" class="form-control" readonly="" type="text" value="<?php echo ambil['kota']; ?>">
+                    <input id="kota" class="form-control" readonly="" type="text" value="<?php echo $ambil['kota']; ?>">
                 </div>
 
                     <div class="form-group ">
                 <label for="provinsi" >Provinsi</label>
-                    <input id="provinsi" class="form-control" readonly="" type="text" value="<?php echo ambil['provinsi']; ?>">
+                    <input id="provinsi" class="form-control" readonly="" type="text" value="<?php echo $ambil['provinsi']; ?>">
                 </div>
 
             <div class="form-group">
                 <label for="email" >Email</label>
-                    <input id="email" class="form-control" readonly="" type="email" value="<?php echo ambil['email']; ?>" >
+                    <input id="email" class="form-control" readonly="" type="email" value="<?php echo $ambil['email']; ?>" >
                 </div>
             
             <div class="form-group">
                 <label for="telp" >No Hp</label>
-                    <input id="telp" type="text" readonly="" class="form-control" name="telp" value="<?php echo ambil['telp']; ?>">
+                    <input id="telp" type="text" readonly="" class="form-control" name="telp" value="<?php echo $ambil['telp']; ?>">
                 </div>
 
                 <div class="form-group ">
                 <label for="kodepos" >Kode Pos</label>
-                    <input id="kodepos" class="form-control" readonly="" type="text" value="<?php echo ambil['kodepos']; ?>">
+                    <input id="kodepos" class="form-control" readonly="" type="text" value="<?php echo $ambil['kodepos']; ?>">
                 </div>
 
 
                 <div class="form-group">
                 <label for="produk">Produk</label>
-                    <input id="produk" type="text" readonly="" class="form-control" name="produk" value="<?php echo ambil['nama_produk']; ?>">
+                    <input id="produk" type="text" readonly="" class="form-control" name="produk" value="<?php echo $ambil['nama_produk']; ?>">
                 </div>
             
             <div class="form-group">
                 <label for="bahan">Bahan</label>
-                    <input id="bahan" type="text" readonly="" class="form-control" name="bahan" value="<?php echo ambil['nama_bahan']; ?>">
+                    <input id="bahan" type="text" readonly="" class="form-control" name="bahan" value="<?php echo $ambil['nama_bahan']; ?>">
                 </div>
             
             <div class="form-group">
                 <label for="gambar">Gambar</label>
-                    <img src="../../gambar/<?php echo ambil['gambar']; ?>" width="200">
+                    <img src="../../gambar/<?php echo $ambil['gambar']; ?>" width="200">
                 </div>
             <div class="form-group">
                 <label for="ket" >Keterangan</label>
-                    <input id="ket" type="text" readonly="" class="form-control" name="ket" value="<?php echo ambil['ket']; ?>">
+                    <input id="ket" type="text" readonly="" class="form-control" name="ket" value="<?php echo $ambil['ket']; ?>">
                 </div>
             </div>  
     </div>
@@ -106,11 +106,11 @@ include '../koneksi.php';
                 $exexlarge = $ambil['exexlarge'];
               ?>
               <tr>
-                <td><?php echo small; ?></td>
-                <td><?php echo medium; ?> </td>
-                <td><?php echo large; ?> </td>
-                <td><?php echo exlarge; ?> </td>
-                <td><?php echo exexlarge; ?> </td>
+                <td><?php echo $small; ?></td>
+                <td><?php echo $medium; ?> </td>
+                <td><?php echo $large; ?> </td>
+                <td><?php echo $exlarge; ?> </td>
+                <td><?php echo $exexlarge; ?> </td>
               </tr> 
             <?php } ?>
             </tbody>  

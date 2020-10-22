@@ -25,9 +25,9 @@
         ?>
         <tr>
             <td><?php echo $no; ?></td>
-            <td><?php echo ambil['nama']; ?> </td>
-            <td><?php echo ambil['tgl_kirim']; ?> </td>
-            <td><?php echo ambil['status']; ?> </td>
+            <td><?php echo $ambil['nama']; ?> </td>
+            <td><?php echo $ambil['tgl_kirim']; ?> </td>
+            <td><?php echo $ambil['status']; ?> </td>
             <td>
                 <button class="btn btn-warning btn-xs" onclick="window.location = 'index.php?p=konfirmasi/edit.php&id_pesan=<?php echo $id_pesan; ?>'"> <i class="fa fa-md fa-edit"></i> 
                 </button>
