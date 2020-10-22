@@ -10,7 +10,7 @@
 	$bahan = POST['id_bahan_1']; //array
 
 	//section 2
-	$desain=$_FILES['desain']; //array
+	$desain=FILES['desain']; //array
 	$ukurans = POST['new_s']; //array //tabel: ukuran
 	$ukuranm = POST['new_m']; //array //tabel: ukuran
 	$ukuranl = POST['new_l']; //array //tabel: ukuran
@@ -35,9 +35,9 @@
 	//$status= $_POST['status'];
 
 	//misc
-	$username = $_SESSION['username'];
+	$username = SESSION_add['username'];
 	$namadesain = uniqid();
-	$fileextension = pathinfo($_FILES['desain']['name'], PATHINFO_EXTENSION);
+	$fileextension = pathinfo(FILES['desain']['name'], PATHINFO_EXTENSION);
 	$new_gambar = $_FILES['desain'];
 	
 
@@ -61,7 +61,7 @@
 
 	mysqli_query($db,"INSERT INTO `pemesanan` (`id_user`,`id_produk`, `id_bahan`, `id_ukuran`,`nama`,`email`,`telp`,`alamat`, `kota`, `provinsi`,`kodepos`, `gambar`, `tgl_kirim`,`tgl_selesai`, `ket`, `gambar_dp`, `gambar_lunas`) VALUES ('".$userid."','".$produk."','".implode($id_bahan)."', '".$ukuranid."','".$nama."','".$email."','".$telp."','".$alamat."','".$kota."', '".$provinsi."','".$kodepos."', '".$namadesain.".".$fileextension."', '".$tgl_kirim."', '".$tgl_selesai."','".$keterangan."','Belum mengirim dp','Belum melakukan pelunasan')");
 
-	move_uploaded_file($_FILES['desain']['tmp_name'],'gambar/'.$namadesain.'.'.$fileextension);
+	move_uploaded_file(FILES['desain']['tmp_name'],'gambar/'.$namadesain.'.'.$fileextension);
 
 
 	// $i = 0; 
