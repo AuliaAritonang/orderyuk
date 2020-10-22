@@ -117,11 +117,11 @@ session_start();
                         <?php 
                                             if($_REQUEST['p']!="")
                                             {
-                                                include '../application/'.$_REQUEST['p'];
+                                                require '../application/'.$_REQUEST['p'];
                                             }
                                             else
                                             {
-                                                include "../application/content.php";
+                                                require "../application/content.php";
                                             }
 
                                             ?>

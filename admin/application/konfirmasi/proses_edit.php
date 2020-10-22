@@ -3,7 +3,7 @@
 include('../koneksi.php');
 // var_dump($sql);
 $id_pesan = POST['id_pesan'];
-if (isset($_POST['simpan'])) {
+if (POST('simpan')) {
 $id_ukuran = POST['id_ukuran'];
 $id_user = POST['id_user'];
 $id_produk = POST['id_produk'];
