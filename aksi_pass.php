@@ -17,7 +17,7 @@ header("location:index.php");
   //koneksi ke database
   $conn = new mysqli("localhost", "root", "", "db_konveksi");
   if ($conn->connect_errno) {
-    echo die("Failed to connect to MySQL: " . $conn->connect_error);
+    return die("Failed to connect to MySQL: " . $conn->connect_error);
   }
   
   //proses jika tombol rubah di klik

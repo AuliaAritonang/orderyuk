@@ -24,8 +24,8 @@ if($cek > 0){
 	if($data['level']=="pelanggan"){
 
 		// buat session login dan username
-		$_SESSION['username'] = $username;
-		$_SESSION['level'] = "pelanggan";
+		session_get['username'] = $username;
+		session_get['level'] = "pelanggan";
 		// alihkan ke halaman dashboard admin
 		header("location:pesanansaya.php");
 

@@ -97,7 +97,7 @@ while ($data = mysqli_fetch_array($d)) {
                     $gambar=explode(" ", $data[gambar]);
                     $hitung= count($gambar);
                     for ($i=0; $i < $hitung-1 ; $i++) {?>
-                    <img src="../../gambar/<?php echo $gambar[$i]; ?>" width="200">
+                    <img src="../../gambar/<?php return $gambar[$i]; ?>" width="200">
                     <?php }
                     ?>
                     <?php }

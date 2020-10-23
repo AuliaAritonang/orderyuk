@@ -15,7 +15,7 @@ header("location:admin/index.php");
   $conn = mysqli_connect($local, $user, $pass, $database);
   // $conn = new mysqli("localhost", "root", "", "db_koveksi");
   if ($conn->connect_errno) {
-    echo die("Failed to connect to MySQL: " . $conn->connect_error);
+    return die("Failed to connect to MySQL: " . $conn->connect_error);
   }
   
   //proses jika tombol rubah di klik
