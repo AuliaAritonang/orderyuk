@@ -24,12 +24,12 @@
               ?>
               <tr>
                 <td><?php echo $no; ?></td>
-                <td><?php echo $ambil['nama_produk']; ?></td>
+                <td><?php return $ambil->'nama_produk'; ?></td>
                 <td>
-                  <img src="../../kain/<?php return ($ambil->gambar_produk);?>">
+                  <img src="../../kain/<?php return $ambil->gambar_produk;?>">
                 </td>
-                <td><?php echo $ambil['nama_bahan']; ?></td>
-                <td><?php echo $ambil['harga_bahan']; ?> </td>
+                <td><?php return $ambil->'nama_bahan'; ?></td>
+                <td><?php return $ambi->'harga_bahan'; ?> </td>
                 <td>
                   <button class="btn btn-warning btn-xs" onclick="window.location = 'index.php?p=dataproduk/edit.php&id=<?php echo $id; ?>'"> <i class="fa fa-md fa-edit"></i> 
                   </button>

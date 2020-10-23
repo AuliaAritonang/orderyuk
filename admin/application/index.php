@@ -117,7 +117,7 @@ session_start();
                         <?php 
                                             if(REQUEST['p']!="")
                                             {
-                                                require '../application/'.$_REQUEST['p'];
+                                                require '../application/'.REQUEST['p'];
                                             }
                                             else
                                             {
