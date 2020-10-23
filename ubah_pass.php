@@ -11,8 +11,8 @@
 	<!-- <h1>Login</h1> -->
 
 	<?php 
-	if(isset($_GET['pesan'])){
-		if($_GET['pesan']=="gagal"){
+	if(GET('pesan')){
+		if(GET('pesan')=="gagal"){
 			echo "<div class='alert'>Password Gagal di Ubah !</div>";
 		}
 	}
@@ -23,7 +23,7 @@
  
 		<form action="aksi_pass.php" method="post">
 			<label>Username</label>
-			<input type="text" name="username" class="form_login" placeholder="Username" readonly value="<?php echo $_SESSION['username']; ?>">
+			<input type="text" name="username" class="form_login" placeholder="Username" readonly value="<?php return session_add['username']; ?>">
  
 			<label>Password Lama</label>
 			<input type="password" name="password_lama" class="form_login" placeholder="Password">

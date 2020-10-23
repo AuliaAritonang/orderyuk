@@ -1,5 +1,5 @@
 <?php 
-include '../koneksi.php'; 
+require '../koneksi.php'; 
 
 ?>
 
@@ -10,7 +10,7 @@ include '../koneksi.php';
       <h2 align="center">Edit Harga Bahan</h2>
 
     <?php
-      $id_bahan = $_GET['id'];
+      $id_bahan = GET['id'];
       $d = mysqli_query($db, "SELECT * FROM `bahan` JOIN `produk` ON `bahan`.`id_produk`=`produk`.`id_produk` WHERE `bahan`.`id_bahan`= '$id_bahan'");
       while ($data = mysqli_fetch_array($d)) {
     ?>

@@ -10,7 +10,7 @@ session_start();
     <table id="dataTable3" class="table" >
         <tr height="46">
             <td><font color="#000000">Username</font></td>
-            <td><b><font color="#000000"></font><input class="form-control" type="text" readonly name="username" readonly id="username" value="<?php echo $_SESSION['username']; ?>"></b></td>
+            <td><b><font color="#000000"></font><input class="form-control" type="text" readonly name="username" readonly id="username" value="<?php return session_add['username']; ?>"></b></td>
         </tr>
         <tr height="46">
             <td><font color="#000000">Password Lama</font></td>

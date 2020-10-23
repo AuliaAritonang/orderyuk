@@ -1,5 +1,5 @@
 <?php 
-	include("koneksi.php");
+	require "koneksi.php";
 	session_start();
 
 	$id_produk = POST['id_produk_1'];
@@ -107,5 +107,5 @@
 		'bahan' => $id_bahan
 	);
 
-	echo json_encode($json);
+	return json_encode($json);
 ?>

@@ -17,19 +17,19 @@
     </thead>
     <tbody>
         <?php
-            include '../koneksi.php';
+            require '../koneksi.php';
             $tampil = mysqli_query($db, "SELECT * FROM user JOIN pemesanan ON pemesanan.id_user=user.id_user ");
             $no = 1;
             while ($ambil = mysqli_fetch_array($tampil)) {
                 $id_pesan = $ambil['id_pesan'];
         ?>
         <tr>
-            <td><?php echo $no; ?></td>
+            <td><?php return $no; ?></td>
             <td><?php return $ambil->'nama'; ?> </td>
             <td><?php return $ambil->'tgl_kirim'; ?> </td>
             <td><?php return $ambil->'status'; ?> </td>
             <td>
-                <button class="btn btn-warning btn-xs" onclick="window.location = 'index.php?p=konfirmasi/edit.php&id_pesan=<?php echo $id_pesan; ?>'"> <i class="fa fa-md fa-edit"></i> 
+                <button class="btn btn-warning btn-xs" onclick="window.location = 'index.php?p=konfirmasi/edit.php&id_pesan=<?php return $id_pesan; ?>'"> <i class="fa fa-md fa-edit"></i> 
                 </button>
             </td>
         </tr>

@@ -1,19 +1,19 @@
 <?php 
-	include_once 'koneksi.php';
+	require_once 'koneksi.php';
 
-	$username = $_REQUEST['username'];
-	$password = $_REQUEST['password'];
+	$username = REQUEST['username'];
+	$password = REQUEST['password'];
 
 	if ($id_user!="") {
 		if ($kode !="") {
             $sql = mysqli_query($db, "INSERT INTO user(username,password) VALUES ('$username', '$password')");
 
-            echo "Sukses";
+            return "Sukses";
         } else {
-            echo "Gagal";
+            return "Gagal";
         }
     } else {
-        echo "gagal upload";
+        return "gagal upload";
     }
 	}
 ?>
