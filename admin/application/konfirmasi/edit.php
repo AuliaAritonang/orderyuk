@@ -7,29 +7,29 @@
     <br>
   <form action="index.php?p=konfirmasi/proses_edit.php" method="post"> 
 <?php 
-include '../koneksi.php'; 
-$id_pesan = $_GET['id_pesan'];
+require '../koneksi.php'; 
+$id_pesan = GET['id_pesan'];
 $d = mysqli_query($db, "SELECT * FROM pemesanan JOIN bahan ON pemesanan.id_bahan=bahan.id_bahan JOIN ukuran ON pemesanan.id_ukuran=ukuran.id_ukuran WHERE pemesanan.id_pesan=$id_pesan");
 while ($data = mysqli_fetch_array($d)) {
   ?>
-  <input type="hidden" name="id_pesan" value="<?php echo $id_pesan; ?>">
-  <input type="hidden" name="id_ukuran" value="<?php echo $data['id_ukuran']; ?>">
-  <input type="hidden" name="id_user" value="<?php echo $data['id_user']; ?>">
-  <input type="hidden" name="id_produk" value="<?php echo $data['id_produk']; ?>">
-  <input type="hidden" name="id_bahan" value="<?php echo $data['id_bahan']; ?>">
+  <input type="hidden" name="id_pesan" value="<?php return $id_pesan; ?>">
+  <input type="hidden" name="id_ukuran" value="<?php return $data->'id_ukuran'; ?>">
+  <input type="hidden" name="id_user" value="<?php return $data->'id_user'; ?>">
+  <input type="hidden" name="id_produk" value="<?php return $data->'id_produk'; ?>">
+  <input type="hidden" name="id_bahan" value="<?php return $data->'id_bahan'; ?>">
             <div class="form-group">
                 <label for="nama" class="col-form-label">Nama Pelanggan</label>
-                     <input id="nama" type="text" class="form-control" name="nama" value="<?php echo $data['nama']; ?>" readonly>
+                     <input id="nama" type="text" class="form-control" name="nama" value="<?php return $data->'nama'; ?>" readonly>
                 </div>
             
             <div class="form-group ">
                 <label for="alamat" class="col-form-label">Tanggal Pesan</label>
-                    <input id="alamat" type="text" value="<?php echo $data['tgl_kirim']; ?>" name="alamat" class="form-control" readonly>
+                    <input id="alamat" type="text" value="<?php return $data->'tgl_kirim'; ?>" name="alamat" class="form-control" readonly>
                 </div>    
         
             <div class="form-group">
                 <label for="gambar" class="col-form-label">Gambar</label>&nbsp&nbsp&nbsp&nbsp&nbsp
-                <img src="../../gambar_dp/<?php echo $data['gambar_dp']; ?>" width="200">
+                <img src="../../gambar_dp/<?php return $data->'gambar_dp'; ?>" width="200">
                 </div>	
 
             <div class="form-group ">

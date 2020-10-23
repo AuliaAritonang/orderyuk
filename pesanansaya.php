@@ -73,10 +73,10 @@ while ($ambil = mysqli_fetch_array($tampil)) {
 
   ?>
   <tr>
-  <td><?php echo $no;?></td>
-  <td><?php echo $ambil['nama_produk'];?></td>
-  <td><?php echo $ambil['nama_bahan'];?></td>
-  <td><?php echo ambil['tgl_kirim'];?></td>
+  <td><?php return $no;?></td>
+  <td><?php return $ambil->'nama_produk';?></td>
+  <td><?php return $ambil->'nama_bahan';?></td>
+  <td><?php return $ambil->'tgl_kirim';?></td>
   <td>Rp</td> 
   <td><?php echo number_format($harga_total);?></td> 
   <td>
@@ -91,10 +91,10 @@ while ($ambil = mysqli_fetch_array($tampil)) {
     }
      ?>
     &emsp;
-    <center><a class="btn btn-info btn-xs" href="bukti_transaksi.php?id_pesan=<?php echo $id_pesan;?>" type="file"><i class="fa fa-upload"></i> Upload</a></center>
+    <center><a class="btn btn-info btn-xs" href="bukti_transaksi.php?id_pesan=<?php return $id_pesan;?>" type="file"><i class="fa fa-upload"></i> Upload</a></center>
       </td>
     <!-- <button class="btn btn-info btn-xs" href = 'bukti_transaksi.php?>'> <i class="fa fa-upload"></i> --> 
-  <td><?php echo $ambil['status'];?></td>
+  <td><?php return $ambil->'status';?></td>
   <td><!-- 
     <button class="btn btn-warning btn-xs" onclick="window.location = 'edit_pesanansaya.php?>'"> <i class="fa fa-md fa-edit"></i> --> 
         <!-- <button class="btn btn-danger btn-xs" onclick="window.location = 'hapus_pesanansaya.php?id_pesan=<?php //echo $id_pesan;?>'"> <i class="fa fa-trash"></i> -->

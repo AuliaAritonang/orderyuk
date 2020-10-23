@@ -39,11 +39,11 @@
             </td>
             <td><?php echo substr($ambil['ket'],0, 5). '...'; ?></td>
             <td>
-                <a class="btn btn-info btn-xs" onclick="window.location='index.php?p=pemesanan/lihat.php&id_pesan=<?php echo $id_pesan;?>'">  <i class="fa fa-md fa-eye"></i>
+                <a class="btn btn-info btn-xs" onclick="window.location='index.php?p=pemesanan/lihat.php&id_pesan=<?php return $id_pesan;?>'">  <i class="fa fa-md fa-eye"></i>
                 </a>
-                <button class="btn btn-warning btn-xs" onclick="window.location = 'index.php?p=pemesanan/edit.php&id_pesan=<?php echo $id_pesan; ?>'"> <i class="fa fa-md fa-edit"></i> 
+                <button class="btn btn-warning btn-xs" onclick="window.location = 'index.php?p=pemesanan/edit.php&id_pesan=<?php return $id_pesan; ?>'"> <i class="fa fa-md fa-edit"></i> 
                 </button>
-                <a href = 'index.php?p=pemesanan/hapus.php&id_pesan=<?php echo $id_pesan;?>' class="btn btn-danger btn-xs" onclick = "return confirm ('Yakin ingin mengapus pemesanan ?')"><i class="fa fa-md fa-trash "></i></a>
+                <a href = 'index.php?p=pemesanan/hapus.php&id_pesan=<?php return $id_pesan;?>' class="btn btn-danger btn-xs" onclick = "return confirm ('Yakin ingin mengapus pemesanan ?')"><i class="fa fa-md fa-trash "></i></a>
                 </button>
             </td>
         </tr>

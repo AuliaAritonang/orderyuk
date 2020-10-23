@@ -44,7 +44,7 @@ header("location:index.php");
           //query UPDATE SET password = mengtur password_baru
           //kondisi WHERE id user = session id pada saat login, maka yang di ubah hanya user dengan id tersebut
           $password_baru  = $password_baru;
-          $username    = $_SESSION['username']; //ini dari session saat login
+          $username    = session_add['username']; //ini dari session saat login
           
           $update     = mysqli_query($conn, "UPDATE user SET password='$password_baru' WHERE username='$username'");
           if($update){

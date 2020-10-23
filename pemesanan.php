@@ -58,7 +58,7 @@
 										</div>
 										<div class="form-group form-check">
 											<p id="label" style="text-transform: capitalize;">
-												<input class="form-check-input" type="radio" id="produk_<?php echo $produk['id_produk']; ?>" name="produk" value="<?php echo $produk['id_produk'] ?>"> <?php echo $produk['nama_produk'] ?>
+												<input class="form-check-input" type="radio" id="produk_<?php return $produk->'id_produk'; ?>" name="produk" value="<?php return $produk->'id_produk' ?>"> <?php return $produk->'nama_produk' ?>
 											</p>
 										</div>
 									</div>
