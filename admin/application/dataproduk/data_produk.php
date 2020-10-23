@@ -26,7 +26,7 @@
                 <td><?php echo $no; ?></td>
                 <td><?php echo $ambil['nama_produk']; ?></td>
                 <td>
-                  <img src="../../kain/<?php echo $ambil['gambar_produk'];?>">
+                  <img src="../../kain/<?php return ($ambil->gambar_produk);?>">
                 </td>
                 <td><?php echo $ambil['nama_bahan']; ?></td>
                 <td><?php echo $ambil['harga_bahan']; ?> </td>
