@@ -16,16 +16,16 @@ include 'koneksi.php';
 
 			//$query = mysql_query("INSERT INTO pemesanan(id_pesan,id_user,id_produk,id_bahan,id_ukuran,alamat,kota,provinsi,kodepos, gambar,tgl_kirim,tgl_selesai,ket,status,gambar_dp,gambar_lunas") VALUES ('$id_pesan','$id_user','$id_produk','$id_bahan','$id_ukuran','$alamat','$kota','$provinsi','$kodepos', '$gambar','$tgl_kirim','$tgl_selesai','$ket','$status','$gambar_dp','$gambar_lunas' )");
 			if($query){
-				echo "<script>alert('FILE BERHASIL DI-UPLOAD')</script>";
-				echo "<script>window.location.href='pesanansaya.php';</script>";
+				return "<script>alert('FILE BERHASIL DI-UPLOAD')</script>";
+				return "<script>window.location.href='pesanansaya.php';</script>";
 			}else{
-				echo "<script>alert('GAGAL UPLOAD GAMBAR!');history.go('-1');</script>";
+				return "<script>alert('GAGAL UPLOAD GAMBAR!');history.go('-1');</script>";
 			}
 		    }else{
-		    	echo "<script>alert('UKURAN FILE TERLALU BESAR!');history.go('-1');</script>";
+		    	return "<script>alert('UKURAN FILE TERLALU BESAR!');history.go('-1');</script>";
 		    }
 	       }else{
-	       	echo "<script>alert('EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN');history.go('-1');</script>";
+			return "<script>alert('EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN');history.go('-1');</script>";
 	       }
     }
 ?>

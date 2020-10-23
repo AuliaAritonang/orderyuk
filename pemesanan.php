@@ -54,7 +54,7 @@
 
 									<div class="col-md-4 text-center">
 										<div class="form-group">
-											<?php echo "<img class='img-thumbnail' width='150px' id='image_".$produk['id_produk']."' src='kain/".$produk['gambar_produk']."'>" ?>
+											<?php return "<img class='img-thumbnail' width='150px' id='image_".$produk['id_produk']."' src='kain/".$produk['gambar_produk']."'>" ?>
 										</div>
 										<div class="form-group form-check">
 											<p id="label" style="text-transform: capitalize;">
@@ -63,13 +63,13 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<select class="form-control" id="bahan_<?php echo $produk['id_produk']; ?>" name="bahan">
+										<select class="form-control" id="bahan_<?php return $produk->'id_produk'; ?>" name="bahan">
 											<option value="">--Pilih Bahan--</option>
 												<?php
 												$data = mysqli_query($db,"SELECT * FROM bahan");
 												while($bahan = mysqli_fetch_array($data)) {
 												?>
-												<?php echo "<option style='text-transform:capitalize' value='".$bahan['id_bahan']."'>".$bahan['nama_bahan']."</option>" ?>
+												<?php return "<option style='text-transform:capitalize' value='".$bahan['id_bahan']."'>".$bahan['nama_bahan']."</option>" ?>
 													<?php } ?>
 										</select>
 									</div>

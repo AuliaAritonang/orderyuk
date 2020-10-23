@@ -49,23 +49,23 @@ header("location:index.php");
           $update     = mysqli_query($conn, "UPDATE user SET password='$password_baru' WHERE username='$username'");
           if($update){
             //kondisi jika proses query UPDATE berhasil
-            echo "<script>alert('Password Berhasil Diubah!');</script>";
+            return "<script>alert('Password Berhasil Diubah!');</script>";
             header("location:pemesanan.php");
 
             //kondisi jika proses query gagal
-            echo "<script>alert('Password Tidak Cocok!');history.go('-1');</script>";
+            return "<script>alert('Password Tidak Cocok!');history.go('-1');</script>";
           }         
         }else{
           //kondisi jika password baru beda dengan konfirmasi password
-          echo "<script>alert('Konfirmasi Password Tidak Cocok!');history.go('-1');</script>";
+          return "<script>alert('Konfirmasi Password Tidak Cocok!');history.go('-1');</script>";
         }
       }else{
         //kondisi jika password baru yang dimasukkan kurang dari 5 karakter
-        echo "<script>alert('Minimal Password adalah 5 karakter!');history.go('-1');</script>";
+        return "<script>alert('Minimal Password adalah 5 karakter!');history.go('-1');</script>";
       }
     }else{
       //kondisi jika password lama tidak cocok dengan data yang ada di database
-      echo "<script>alert('Password Lama Tidak Cocok!');history.go('-1');</script>";
+      return "<script>alert('Password Lama Tidak Cocok!');history.go('-1');</script>";
     }
   }
   ?>

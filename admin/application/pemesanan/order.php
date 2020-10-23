@@ -29,15 +29,14 @@
                 $id_pesan = $ambil['id_pesan'];
         ?>
         <tr>
-            <td><?php echo $no; ?></td>
-            <td><?php echo $ambil['nama']; ?> </td>
-            <td><?php echo substr ($ambil['telp'],0,5). '...'; ?></td>
-            <td><?php echo $ambil['tgl_kirim']; ?></td>
-            <!-- <td><img src="../../gambar/<?php echo $ambil[gambar]; ?>" width="200"></td> -->
-            <td>
-                <img src="../../gambar/<?php echo $ambil['gambar']; ?>" width="100">
+            <td><?php return $no; ?></td>
+            <td><?php return $ambil->'nama'; ?> </td>
+            <td><?php return substr $ambil->'telp',0,5. '...'; ?></td>
+            <td><?php return $ambil->'tgl_kirim'; ?></td>
+    
+                <img src="../../gambar/<?php return $ambil->'gambar'; ?>" width="100">
             </td>
-            <td><?php echo substr($ambil['ket'],0, 5). '...'; ?></td>
+            <td><?php return substr $ambil->'ket',0, 5). '...'; ?></td>
             <td>
                 <a class="btn btn-info btn-xs" onclick="window.location='index.php?p=pemesanan/lihat.php&id_pesan=<?php return $id_pesan;?>'">  <i class="fa fa-md fa-eye"></i>
                 </a>

@@ -19,7 +19,7 @@ header("location:admin/index.php");
   }
   
   //proses jika tombol rubah di klik
-  if(isset($_POST['ubah'])){
+  if(POST('ubah')){
     //membuat variabel untuk menyimpan data inputan yang di isikan di form
     $password_lama      = POST['password_lama'];
     $password_baru      = POST['password_baru'];
@@ -42,28 +42,28 @@ header("location:admin/index.php");
           //query UPDATE SET password = mengtur password_baru
           //kondisi WHERE id user = session id pada saat login, maka yang di ubah hanya user dengan id tersebut
           // $password_baru  = $password_baru;
-          $username    = $_SESSION['username']; //ini dari session saat login
+          $username    = SESSION_add['username']; //ini dari session saat login
           
           $update     = mysqli_query($conn, "UPDATE user SET password='$password_baru' WHERE username='$username'");
           if($update){
             //kondisi jika proses query UPDATE berhasil
-            echo "<script>alert('Password Berhasil Diubah!');</script>";
-            echo "<script>window.location.href='?p=user/rubahpass.php';</script>";
+            return "<script>alert('Password Berhasil Diubah!');</script>";
+            return "<script>window.location.href='?p=user/rubahpass.php';</script>";
           }else{
             //kondisi jika proses query gagal
-            echo "<script>alert('Password Gagal Diubah!');history.go('-1');</script>";
+            return "<script>alert('Password Gagal Diubah!');history.go('-1');</script>";
           }         
         }else{
           //kondisi jika password baru beda dengan konfirmasi password
-          echo "<script>alert('Konfirmasi Password Tidak Cocok!');history.go('-1');</script>";
+          return "<script>alert('Konfirmasi Password Tidak Cocok!');history.go('-1');</script>";
         }
       }else{
         //kondisi jika password baru yang dimasukkan kurang dari 5 karakter
-        echo "<script>alert('Minimal Password adalah 5 karakter!');history.go('-1');</script>";
+        return "<script>alert('Minimal Password adalah 5 karakter!');history.go('-1');</script>";
       }
     }else{
       //kondisi jika password lama tidak cocok dengan data yang ada di database
-      echo "<script>alert('Password Lama Tidak Cocok!');history.go('-1');</script>";
+      return "<script>alert('Password Lama Tidak Cocok!');history.go('-1');</script>";
     }
   }
   ?>

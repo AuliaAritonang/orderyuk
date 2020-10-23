@@ -5,5 +5,5 @@
 
 	$sql = mysqli_query($db,"SELECT id_bahan, nama_bahan, CAST(harga_bahan AS INT) AS harga_bahan FROM bahan WHERE id_bahan='".$id_bahan."'");
 
-	echo json_encode(mysqli_fetch_array($sql));
+	return json_encode(mysqli_fetch_array($sql));
 ?>

@@ -36,10 +36,10 @@ while ($data = mysqli_fetch_array($d)) {
                 <label for="ket" class="col-form-label">Status</label>
                 <?php $status = $data['status'];?>
                   <select class="form-control" name="status">
-                    <option <?php echo ($status == 'Menunggu Pembayaran') ? "selected": "" ?>>Menunggu Pembayaran</option>
-                    <option <?php echo ($status == 'Sedang diproses') ? "selected": "" ?>>Sedang diproses</option>
-                    <option <?php echo ($status == 'Sedang dikirim') ? "selected": "" ?>>Sedang dikirim</option>
-                    <option <?php echo ($status == 'Selesai') ? "selected": "" ?>>Selesai</option>
+                    <option <?php return ($status == 'Menunggu Pembayaran') ? "selected": "" ?>>Menunggu Pembayaran</option>
+                    <option <?php return ($status == 'Sedang diproses') ? "selected": "" ?>>Sedang diproses</option>
+                    <option <?php return ($status == 'Sedang dikirim') ? "selected": "" ?>>Sedang dikirim</option>
+                    <option <?php return ($status == 'Selesai') ? "selected": "" ?>>Selesai</option>
                   </select>
                 </div>
                 </div>

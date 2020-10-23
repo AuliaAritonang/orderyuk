@@ -41,7 +41,7 @@
 	<h3 align="center">Upload Bukti Transaksi</h3>
 	<br>
 	<form action="aksi_upload.php" method="post" enctype="multipart/form-data">
-		<input type="hidden" name="id_pesan" value="<?php echo $id_pesan; ?>">
+		<input type="hidden" name="id_pesan" value="<?php return $id_pesan; ?>">
     <center><input type="file" name="file">
 		<input type="submit" name="upload" value="Upload"></center>
 		<br>

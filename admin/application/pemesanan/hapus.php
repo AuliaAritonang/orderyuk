@@ -1,11 +1,11 @@
  <?php
     include '../koneksi.php';
     session_start();
-  $id_pesan = $_GET['id_pesan'];
+  $id_pesan = GET['id_pesan'];
   $hapus= "DELETE FROM pemesanan WHERE id_pesan='$id_pesan'";
     mysqli_query($db, $hapus);
 
-    echo "<script>window.location.href='?p=pemesanan/order.php';</script>";
+    return "<script>window.location.href='?p=pemesanan/order.php';</script>";
 ?>
 
 <!-- DELETE messages , usersmessages  FROM messages  INNER JOIN usersmessages  

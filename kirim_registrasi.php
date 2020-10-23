@@ -5,7 +5,7 @@ $password = addslashes(strip_tags ($_POST['password'])); //script ini untuk meng
 
   //password harus 6-25 karakter
   if (strlen($password) > 15 || strlen($password) < 6){
-    echo "<script>alert ('Password harus antara 6-15 karakter')</script>";
+    return "<script>alert ('Password harus antara 6-15 karakter')</script>";
   }
   else {
   //untuk mengecek apakah form password dan form konfirmasi password sudah sama
@@ -27,7 +27,7 @@ $password = addslashes(strip_tags ($_POST['password'])); //script ini untuk meng
     <?php 
       }
       else {
-        echo "<script> alert('Username sudah terdaftar');history.go(-1);</script>";
+        return "<script> alert('Username sudah terdaftar');history.go(-1);</script>";
       }
 } 
 ?>

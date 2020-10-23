@@ -18,22 +18,22 @@ if(POST['login']){
 			$db_pass = $row['password'];
  
 			if($username == $db_user && $password == $db_pass){
-				$_SESSION['username'] = $db_user;
+				dession_add['username'] = $db_user;
 				header("location:application/index.php");
 
 				// masukkan script lainnya disini
 				// seperti Session atau redirect ke halaman admin
 			}else{
-				echo "<script>alert('Username dan Password tidak cocok!');</script>";
-				echo "<script>window.location.href='index.php';</script>";
+				return "<script>alert('Username dan Password tidak cocok!');</script>";
+				return "<script>window.location.href='index.php';</script>";
 			}
 		}else{
-			echo "<script>alert('Username tidak ada dalam Database!');</script>";
-			echo "<script>window.location.href='index.php';</script>";
+			return "<script>alert('Username tidak ada dalam Database!');</script>";
+			return "<script>window.location.href='index.php';</script>";
 		}
 	}else{
-		echo "<script>alert('Username dan Password masih kosong!');</script>";
-		echo "<script>window.location.href='index.php';</script>";
+		return "<script>alert('Username dan Password masih kosong!');</script>";
+		return "<script>window.location.href='index.php';</script>";
 	}
 } 
 ?>

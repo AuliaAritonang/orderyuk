@@ -55,7 +55,7 @@
 <?php 
 include'koneksi.php';
 
-$username = $_SESSION['username'];
+$username = session_add['username'];
 $tampil= mysqli_query($db,"SELECT * FROM user JOIN pemesanan ON pemesanan.id_user=user.id_user JOIN produk ON produk.id_produk=pemesanan.id_produk JOIN bahan ON bahan.id_bahan= pemesanan.id_bahan JOIN ukuran ON ukuran.id_ukuran=pemesanan.id_ukuran WHERE user.username='$username'");
   $no=1;
 // $harga_total = ($ambil['small']+$ambil['medium']+$ambil['large']+$ambil['exlarge']+$ambil['exexlarge'])*$ambil['harga_bahan'];
@@ -78,16 +78,16 @@ while ($ambil = mysqli_fetch_array($tampil)) {
   <td><?php return $ambil->'nama_bahan';?></td>
   <td><?php return $ambil->'tgl_kirim';?></td>
   <td>Rp</td> 
-  <td><?php echo number_format($harga_total);?></td> 
+  <td><?php return number_format($harga_total);?></td> 
   <td>
     <?php
     
     if ($ambil['gambar_dp'] != 'Belum mengirim dp'){
-      echo "<img src='gambar_dp/";
-      echo ambil['gambar_dp'];
-      echo " width='150'>";
+      return "<img src='gambar_dp/";
+      return $ambil->'gambar_dp';
+      return " width='150'>";
     } else{
-      echo "Bukti Transaksi belum di-upload";
+      return "Bukti Transaksi belum di-upload";
     }
      ?>
     &emsp;

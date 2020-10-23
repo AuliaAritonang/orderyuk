@@ -23,7 +23,7 @@
                 $id = $ambil['id_bahan'];
               ?>
               <tr>
-                <td><?php echo $no; ?></td>
+                <td><?php return $no; ?></td>
                 <td><?php return $ambil->'nama_produk'; ?></td>
                 <td>
                   <img src="../../kain/<?php return $ambil->gambar_produk;?>">
@@ -31,7 +31,7 @@
                 <td><?php return $ambil->'nama_bahan'; ?></td>
                 <td><?php return $ambi->'harga_bahan'; ?> </td>
                 <td>
-                  <button class="btn btn-warning btn-xs" onclick="window.location = 'index.php?p=dataproduk/edit.php&id=<?php echo $id; ?>'"> <i class="fa fa-md fa-edit"></i> 
+                  <button class="btn btn-warning btn-xs" onclick="window.location = 'index.php?p=dataproduk/edit.php&id=<?php return $id; ?>'"> <i class="fa fa-md fa-edit"></i> 
                   </button>
                   <!-- <button onClick="confirmDelete(<?php //echo $id; ?>)" class="btn btn-danger btn-xs"><i class="fa fa-md fa-trash "></i>
                   </button>

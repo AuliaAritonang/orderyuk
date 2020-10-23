@@ -47,12 +47,12 @@ $ket = POST['ket'];
 
         
         if(mysqli_query($db, $sql)){
-			echo "<script>alert('Mengubah data berhasil');</script>";
-			echo "<meta http-equiv='refresh' content='1 url=?p=pemesanan/order.php'>";
+			return "<script>alert('Mengubah data berhasil');</script>";
+			return "<meta http-equiv='refresh' content='1 url=?p=pemesanan/order.php'>";
 			// echo "<a href='?p=pemesanan/order.php'>Kembali Ke Halaman Depan</a>";
     } else {
         // jika gagal tampil ini
-        echo "Gagal Melakukan Perubahan: " . $db->error;
+        return "Gagal Melakukan Perubahan: " . $db->error;
     }
 }
 ?>
