@@ -20,71 +20,71 @@ while ($data = mysqli_fetch_array($d)) {
   
             <div class="form-group">
                 <label for="nama" class="col-form-label">Nama Pelanggan</label>
-                     <input id="nama" type="text" class="form-control" name="nama" value="<?php echo $data['nama']; ?>">
+                     <input id="nama" type="text" class="form-control" name="nama" value="<?php return $data->'nama'; ?>">
                 </div>
             
             <div class="form-group ">
                 <label for="alamat" class="col-form-label">Alamat Kirim</label>
-                    <input id="alamat" type="text" value="<?php echo $data['alamat']; ?>" name="alamat" class="form-control">
+                    <input id="alamat" type="text" value="<?php return $data->'alamat'; ?>" name="alamat" class="form-control">
                 </div>
 
                 <div class="form-group ">
                 <label for="kota" class="col-form-label">Kota</label>
-                    <input id="kota" type="text" value="<?php echo $data['kota']; ?>" name="kota" class="form-control">
+                    <input id="kota" type="text" value="<?php return $data->'kota'; ?>" name="kota" class="form-control">
                 </div>
 
                 <div class="form-group ">
                 <label for="provinsi" class="col-form-label">Provinsi</label>
-                    <input id="provinsi" type="text" value="<?php echo $data['provinsi']; ?>" name="provinsi" class="form-control">
+                    <input id="provinsi" type="text" value="<?php return $data->'provinsi'; ?>" name="provinsi" class="form-control">
                 </div>
 
                 <div class="form-group ">
                 <label for="kodepos" class="col-form-label">Kode Pos</label>
-                    <input id="kodepos" type="text" value="<?php echo $data['kodepos']; ?>" name="kodepos" class="form-control">
+                    <input id="kodepos" type="text" value="<?php return $data->'kodepos'; ?>" name="kodepos" class="form-control">
                 </div>
             
             <div class="form-group">
                 <label for="email" class="col-form-label">Email</label>
-                    <input id="email" type="email" value="<?php echo $data['email']; ?>" name="email" class="form-control">
+                    <input id="email" type="email" value="<?php return $data->'email'; ?>" name="email" class="form-control">
                 </div>
             
             <div class="form-group">
                 <label for="telp" class="col-form-label">No Telepon</label>
-                    <input id="telp" type="text" class="form-control" name="telp" value="<?php echo $data['telp']; ?>">
+                    <input id="telp" type="text" class="form-control" name="telp" value="<?php return $data->'telp'; ?>">
                 </div>
 
             <div class="form-group">
                 <label for="telp" class="col-form-label">Produk</label>
-                    <input id="produk" type="text" class="form-control" name="nama_produk" value="<?php echo $data['nama_produk']; ?>">
+                    <input id="produk" type="text" class="form-control" name="nama_produk" value="<?php return $data->'nama_produk'; ?>">
                 </div>
 
             <div class="form-group">
                 <label for="telp" class="col-form-label">Bahan</label>
-                    <input id="bahan" type="text" class="form-control" name="nama_bahan" readonly value="<?php echo $data['nama_bahan']; ?>">
+                    <input id="bahan" type="text" class="form-control" name="nama_bahan" readonly value="<?php return $data->'nama_bahan'; ?>">
                 </div>
 
             <div class="form-group ">
              <label class="col-form-label">Ukuran S </label>
-                  <input type="text" class="form-control" id="small" placeholder="Jumlah Ukuran S" required="required" data-validation-required-message="Please enter your sent order." name="small" value="<?php echo $data['small'] ?>" /> 
+                  <input type="text" class="form-control" id="small" placeholder="Jumlah Ukuran S" required="required" data-validation-required-message="Please enter your sent order." name="small" value="<?php return $data->'small' ?>" /> 
                 </div>
                   <div class="form-group ">
              <label class="col-form-label">Ukuran M </label>
-                  <input type="text" class="form-control" id="medium" placeholder="Jumlah Ukuran M" required="required" data-validation-required-message="Please enter your sent order." name="medium" value="<?php echo $data['medium'] ?>" />  </div>
+                  <input type="text" class="form-control" id="medium" placeholder="Jumlah Ukuran M" required="required" data-validation-required-message="Please enter your sent order." name="medium" value="<?php return $data->'medium' ?>" />  </div>
 
             <div class="form-group">
               <label class="col-form-label">Ukuran L</label>
-                  <input type="text" class="form-control" id="large" placeholder="Jumlah Ukuran L" required="required" data-validation-required-message="Please enter your sent order." name="large" value="<?php echo $data['large'] ?>" />
+                  <input type="text" class="form-control" id="large" placeholder="Jumlah Ukuran L" required="required" data-validation-required-message="Please enter your sent order." name="large" value="<?php return $data->'large' ?>" />
               </div>
             
             <div class="form-group">
                <label class="col-form-label">Ukuran XL</label>
-                  <input type="text" class="form-control" id="exlarge" placeholder="Jumlah Ukuran XL" required="required" data-validation-required-message="Please enter your sent order." name="exlarge" value="<?php echo $data['exlarge'] ?>" /> 
+                  <input type="text" class="form-control" id="exlarge" placeholder="Jumlah Ukuran XL" required="required" data-validation-required-message="Please enter your sent order." name="exlarge" value="<?php return $data->'exlarge' ?>" /> 
                   </div>
                 
 
                    <div class="form-group">
                <label class="col-form-label">Ukuran XXL</label>
-                  <input type="text" class="form-control" id="exexlarge" placeholder="Jumlah Ukuran XXL"required="required" data-validation-required-message="Please enter your sent order." name="exexlarge" value="<?php echo $data['exexlarge'] ?>" />
+                  <input type="text" class="form-control" id="exexlarge" placeholder="Jumlah Ukuran XXL"required="required" data-validation-required-message="Please enter your sent order." name="exexlarge" value="<?php return $data->'exexlarge' ?>" />
               </div>
           
         
