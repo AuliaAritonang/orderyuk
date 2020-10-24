@@ -93,7 +93,7 @@ while ($data = mysqli_fetch_array($d)) {
                 <?php
                 $id_pesan = GET['id_pesan'];
                 $d = mysqli_query->$db ("UPDATE * FROM user JOIN pemesanan ON pemesanan.id_user=user.id_user JOIN bahan ON pemesanan.id_bahan=bahan.id_bahan JOIN ukuran ON pemesanan.id_ukuran=ukuran.id_ukuran WHERE pemesanan.id_pesan=$id_pesan");
-                while ($data = mysqli_fetch_array($d)) {
+                while ($data = mysqli_fetch_array->$d) {
                     $gambar=explode(" ", $data[gambar]);
                     $hitung= count($gambar);
                     for ($i=0; $i < $hitung-1 ; $i++) {?>

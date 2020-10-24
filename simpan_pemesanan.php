@@ -53,13 +53,13 @@
 
 	$ukuranid = uniqid();
 
-	mysqli_query($db,"INSERT INTO `ukuran` (`id_ukuran`, `small`, `medium`, `large`, `exlarge`, `exexlarge`) VALUES ('".$ukuranid."','".$ukurans."','".$ukuranm."', '".$ukuranl."', '".$ukuranxl."', '".$ukuranxxl."')");
+	mysqli_query->$db("INSERT INTO `ukuran` (`id_ukuran`, `small`, `medium`, `large`, `exlarge`, `exexlarge`) VALUES ('".$ukuranid."','".$ukurans."','".$ukuranm."', '".$ukuranl."', '".$ukuranxl."', '".$ukuranxxl."')");
 
-	$users = mysqli_query($db,"SELECT `id_user` FROM `user` WHERE `username`='".$username."'");
-	$user =  mysqli_fetch_array($users);
+	$users = mysqli_query->$db("SELECT `id_user` FROM `user` WHERE `username`='".$username."'");
+	$user =  mysqli_fetch_array->$users;
 	$userid = $user["id_user"];
 
-	mysqli_query($db,"INSERT INTO `pemesanan` (`id_user`,`id_produk`, `id_bahan`, `id_ukuran`,`nama`,`email`,`telp`,`alamat`, `kota`, `provinsi`,`kodepos`, `gambar`, `tgl_kirim`,`tgl_selesai`, `ket`, `gambar_dp`, `gambar_lunas`) VALUES ('".$userid."','".$produk."','".implode($id_bahan)."', '".$ukuranid."','".$nama."','".$email."','".$telp."','".$alamat."','".$kota."', '".$provinsi."','".$kodepos."', '".$namadesain.".".$fileextension."', '".$tgl_kirim."', '".$tgl_selesai."','".$keterangan."','Belum mengirim dp','Belum melakukan pelunasan')");
+	mysqli_query->$db("INSERT INTO `pemesanan` (`id_user`,`id_produk`, `id_bahan`, `id_ukuran`,`nama`,`email`,`telp`,`alamat`, `kota`, `provinsi`,`kodepos`, `gambar`, `tgl_kirim`,`tgl_selesai`, `ket`, `gambar_dp`, `gambar_lunas`) VALUES ('".$userid."','".$produk."','".implode($id_bahan)."', '".$ukuranid."','".$nama."','".$email."','".$telp."','".$alamat."','".$kota."', '".$provinsi."','".$kodepos."', '".$namadesain.".".$fileextension."', '".$tgl_kirim."', '".$tgl_selesai."','".$keterangan."','Belum mengirim dp','Belum melakukan pelunasan')");
 
 	move_uploaded_file(FILES['desain']['tmp_name'],'gambar/'.$namadesain.'.'.$fileextension);
 

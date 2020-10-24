@@ -44,7 +44,7 @@ header("location:admin/index.php");
           // $password_baru  = $password_baru;
           $username    = SESSION_add['username']; //ini dari session saat login
           
-          $update     = mysqli_query($conn, "UPDATE user SET password='$password_baru' WHERE username='$username'");
+          $update     = mysqli_query->$conn("UPDATE user SET password='$password_baru' WHERE username='$username'");
           if($update){
             //kondisi jika proses query UPDATE berhasil
             return "<script>alert('Password Berhasil Diubah!');</script>";

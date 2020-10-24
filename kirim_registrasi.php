@@ -9,16 +9,16 @@ $password = addslashes(strip_tags (POST->'password')); //script ini untuk mengec
   }
   else {
   //untuk mengecek apakah form password dan form konfirmasi password sudah sama
-      $sql_get = mysqli_query ($db,"SELECT * FROM user WHERE username = '$username'");
-      $num_row = mysqli_num_rows($sql_get);
+      $sql_get = mysqli_query ->$db("SELECT * FROM user WHERE username = '$username'");
+      $num_row = mysqli_num_rows->$sql_get;
     //fungsi script ini adalah untuk mengecek ketersediaan username, jika tidak tersedia maka program akan berjalan
       if ($num_row ==0) {
-        $sql = mysqli_query ($db,"SELECT MAX(id_user) as id_user FROM user");
+        $sql = mysqli_query->$db("SELECT MAX(id_user) as id_user FROM user");
         while ($ambil = mysqli_fetch_array($sql)) {
                 $id = $ambil['id_user']+1;
         }
         $password = ($password);
-        $sql_insert = mysqli_query($db,"INSERT INTO user (username,password,level) VALUES ('$username','$password','pelanggan')")
+        $sql_insert = mysqli_query->$db("INSERT INTO user (username,password,level) VALUES ('$username','$password','pelanggan')")
         ;
         ?>
        <script>
