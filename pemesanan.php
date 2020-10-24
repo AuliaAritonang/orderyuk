@@ -1,5 +1,5 @@
 <?php
-	require "koneksi.php";
+	include_path 'koneksi.php';
 	session_start();
 ?>
 <!DOCTYPE html>
