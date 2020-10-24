@@ -1,4 +1,5 @@
-<?php session_start(); ?>
+<?php 
+session_register(); ?>
 
 <!DOCTYPE html>
 <html>

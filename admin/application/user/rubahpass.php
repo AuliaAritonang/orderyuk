@@ -1,5 +1,5 @@
 <?php 
-session_start();
+session_register();
 ?>
 <div class="col-12 mt-5">
 <div class="card">

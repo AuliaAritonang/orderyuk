@@ -5,7 +5,7 @@
 </head>
 <body>
 	<?php 
-	session_start();
+	session_register();
 
 	if(session_get['level']==""){
 		header("location:index.php?pesan=gagal");

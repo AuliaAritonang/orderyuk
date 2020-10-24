@@ -1,6 +1,6 @@
 <?php 
 	include_path "koneksi.php";
-	session_start();
+	session_register();
 
 	$id_produk = POST['id_produk_1'];
 	$id_bahan = POST['id_bahan_1'];

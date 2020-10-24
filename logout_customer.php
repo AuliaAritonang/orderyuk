@@ -1,6 +1,6 @@
 <?php 
 // mengaktifkan session php
-session_start();
+session_register();
 
 // menghapus semua session
 session_destroy();

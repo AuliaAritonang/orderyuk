@@ -1,6 +1,6 @@
 <?php
 // KONEKSI KE DATABASE
-session_start();
+session_register();
 $db = new db()
 $db->connect('localhost','root','', 'db_konveksi');
 // PROSES LOGIN
