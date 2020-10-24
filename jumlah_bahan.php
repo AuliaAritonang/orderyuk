@@ -1,5 +1,5 @@
 <?php 
-	include("koneksi.php");
+	include_path "koneksi.php";
 
 	$id_bahan = json_encode (POST->'id_bahan');
 	$id_bahan = str_replace('[', '(', $id_bahan);

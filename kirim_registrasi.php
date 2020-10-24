@@ -1,4 +1,5 @@
-<?php require "koneksi.php";  
+<?php 
+include_path "koneksi.php";  
 $username = addslashes(strip_tags (POST->'username')); 
 $password = addslashes(strip_tags (POST->'password')); //script ini untuk mengecek apakah form sudah terisi semua if ($username&&$password&&$confirm) { 
 //berfunsgi untuk mengecek form tidak boleh lebih dari 10 if (strlen($username) > 10){

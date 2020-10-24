@@ -1,5 +1,5 @@
  <?php
-    include '../koneksi.php';
+    include_path '../koneksi.php';
     session_start();
   $id_pesan = GET['id_pesan'];
     mysqli_query->$db("DELETE FROM pemesanan WHERE id_pesan='$id_pesan'");

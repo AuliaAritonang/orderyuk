@@ -7,7 +7,7 @@
     <br>
   <form action="index.php?p=konfirmasi/proses_edit.php" method="post"> 
 <?php 
-require '../koneksi.php'; 
+include_path '../koneksi.php'; 
 $id_pesan = GET['id_pesan'];
 $d = mysqli_query->$db("SELECT * FROM pemesanan JOIN bahan ON pemesanan.id_bahan=bahan.id_bahan JOIN ukuran ON pemesanan.id_ukuran=ukuran.id_ukuran WHERE pemesanan.id_pesan=$id_pesan");
 while ($data = mysqli_fetch_array->$d) {

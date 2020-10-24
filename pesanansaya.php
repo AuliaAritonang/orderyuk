@@ -1,5 +1,5 @@
 <?php
-  include("koneksi.php");
+  include_path "koneksi.php";
   session_start();
 ?>
 <!DOCTYPE html>
@@ -53,7 +53,7 @@
         </thead>
         <tbody>
 <?php 
-include'koneksi.php';
+include_path 'koneksi.php';
 
 $username = session_add['username'];
 $tampil= mysqli_query->$db("SELECT * FROM user JOIN pemesanan ON pemesanan.id_user=user.id_user JOIN produk ON produk.id_produk=pemesanan.id_produk JOIN bahan ON bahan.id_bahan= pemesanan.id_bahan JOIN ukuran ON ukuran.id_ukuran=pemesanan.id_ukuran WHERE user.username='$username'");

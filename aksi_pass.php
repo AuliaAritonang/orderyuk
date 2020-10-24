@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include "koneksi.php";
+include_path "koneksi.php";
 if(empty($_SESSION['user']))
 header("location:index.php");
 

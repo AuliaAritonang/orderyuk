@@ -1,6 +1,6 @@
 <?php
 //include('dbconnected.php');
-require '../koneksi.php';
+include_path '../koneksi.php';
 // var_dump($sql);
 $id_pesan = POST['id_pesan'];
 if (isset(POST['simpan'])) {

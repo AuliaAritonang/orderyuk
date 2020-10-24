@@ -22,7 +22,7 @@
     </thead>
     <tbody>
         <?php
-            include '../koneksi.php';
+            include_path '../koneksi.php';
             $tampil = mysqli_query->$db("SELECT * FROM user JOIN pemesanan ON pemesanan.id_user=user.id_user ");
             $no = 1;
             while ($ambil = mysqli_fetch_array($tampil)) {

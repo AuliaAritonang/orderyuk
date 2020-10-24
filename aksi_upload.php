@@ -1,5 +1,5 @@
 <?php 
-include 'koneksi.php';
+include_path 'koneksi.php';
    if(POST['upload']){
    	$id_pesan = POST['id_pesan'];
 	$ekstensi_diperbolehkan	= array('png','jpg');

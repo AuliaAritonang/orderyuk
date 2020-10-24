@@ -1,5 +1,5 @@
 <?php 
-    include("../koneksi.php");
+    include_path "../koneksi.php";
     $id = POST["id"];
     $result = mysqli_query->$db("SELECT * FROM produk WHERE id_produk=".$id);
 

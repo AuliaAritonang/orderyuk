@@ -16,7 +16,7 @@
             </thead>                  
             <tbody>
             <?php
-              include '../koneksi.php';
+              include_path '../koneksi.php';
               $tampil = mysqli_query->$db("SELECT * FROM bahan JOIN produk ON bahan.id_produk=produk.id_produk");
               $no = 1;
               while ($ambil = mysqli_fetch_array($tampil)) {

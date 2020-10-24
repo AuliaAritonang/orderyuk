@@ -5,7 +5,8 @@
     $pass  = "";
     $database = "db_konveksi";
 
-    $db = mysqli_connect($local, $user, $pass, $database);
+    $db = new db()
+    $db->connect($local, $user, $pass, $database);
     // if ($db == true ) {
     //     echo "berhasil koneksi";
     // } else {

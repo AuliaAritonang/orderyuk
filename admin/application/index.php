@@ -60,7 +60,7 @@ session_start();
                         <ul class="metismenu" id="menu">
                          
                             <li>
-                                <?php include ('../application/menu.php'); ?><i class="fa fa-table"></i>
+                                <?php include_path ('../application/menu.php'); ?><i class="fa fa-table"></i>
                                 <ul class="collapse">
                                 <!-- <li><a href="datatable.html">datatable</a></li> -->
                                 </ul>

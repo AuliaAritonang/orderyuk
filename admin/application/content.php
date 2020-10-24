@@ -1,5 +1,5 @@
 <?php
-require '../koneksi.php';
+include_path '../koneksi.php';
 ?>
 <div class="col-12 mt-5">
 <div class="card">

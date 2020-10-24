@@ -1,5 +1,5 @@
 <?php 
-	include("koneksi.php");
+	include_path"koneksi.php";
 
 	$id_bahan = POST['id_bahan'];
 
