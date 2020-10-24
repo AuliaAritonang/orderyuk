@@ -1,6 +1,6 @@
 <?php
   include_path "koneksi.php";
-  session_start();
+  session_register();
 ?>
 <!DOCTYPE html>
 <html>
