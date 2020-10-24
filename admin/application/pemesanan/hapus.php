@@ -2,8 +2,7 @@
     include '../koneksi.php';
     session_start();
   $id_pesan = GET['id_pesan'];
-  $hapus= "DELETE FROM pemesanan WHERE id_pesan='$id_pesan'";
-    mysqli_query($db, $hapus);
+    mysqli_query->$db("DELETE FROM pemesanan WHERE id_pesan='$id_pesan'");
 
     return "<script>window.location.href='?p=pemesanan/order.php';</script>";
 ?>

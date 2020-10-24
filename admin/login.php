@@ -1,8 +1,8 @@
 <?php
 // KONEKSI KE DATABASE
 session_start();
-$koneksi = mysqli_connect('localhost','root','', 'db_konveksi');
-
+$db = new db()
+$db->connect('localhost','root','', 'db_konveksi');
 // PROSES LOGIN
 if(POST['login']){
 	$username	= POST['username'];
@@ -12,7 +12,7 @@ if(POST['login']){
 		$cek_db	= "SELECT * FROM user WHERE username='$username' and password='$password'";
 		$query	= mysqli_query($koneksi, $cek_db);
 		$_SESSION['user']=$query;
-		if(mysqli_num_rows($query) != 0){
+		if(mysqli_num_rows->$query != 0){
 			$row = mysqli_fetch_assoc($query);
 			$db_user = $row['username'];
 			$db_pass = $row['password'];

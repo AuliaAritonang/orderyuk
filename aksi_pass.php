@@ -31,7 +31,7 @@ header("location:index.php");
     //kondisi adalah WHERE (dimana) kolom password adalah $password_lama di encrypt m5
     //encrypt -> md5($password_lama)
     $password_lama  = $password_lama;
-    $cek      = mysqli_query($conn,"SELECT password FROM user WHERE password='$password_lama'");
+    $cek      = mysqli_query->$conn("SELECT password FROM user WHERE password='$password_lama'");
     
     if($cek->num_rows){
       //kondisi ini jika password lama yang dimasukkan sama dengan yang ada di database
@@ -46,7 +46,7 @@ header("location:index.php");
           $password_baru  = $password_baru;
           $username    = session_add['username']; //ini dari session saat login
           
-          $update     = mysqli_query($conn, "UPDATE user SET password='$password_baru' WHERE username='$username'");
+          $update     = mysqli_query->$conn("UPDATE user SET password='$password_baru' WHERE username='$username'");
           if($update){
             //kondisi jika proses query UPDATE berhasil
             return "<script>alert('Password Berhasil Diubah!');</script>";

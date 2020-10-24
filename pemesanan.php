@@ -48,7 +48,7 @@
 							<section class="container">
 								<div class="row" id="produk">
 									<?php
-										$sql = mysqli_query($db,"SELECT * FROM produk");
+										$sql = mysqli_query->$db("SELECT * FROM produk");
 										while($produk = mysqli_fetch_array($sql)){
 									?>
 
@@ -67,7 +67,7 @@
 											<option value="">--Pilih Bahan--</option>
 												<?php
 												$data = mysqli_query($db,"SELECT * FROM bahan");
-												while($bahan = mysqli_fetch_array($data)) {
+												while($bahan = mysqli_fetch_array->$data) {
 												?>
 												<?php return "<option style='text-transform:capitalize' value='".$bahan['id_bahan']."'>".$bahan['nama_bahan']."</option>" ?>
 													<?php } ?>

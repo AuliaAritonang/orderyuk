@@ -2,7 +2,7 @@
 <?php
 include '../koneksi.php';
     $id_pesan = GET['id_pesan'];
-    $tampil = mysqli_query($db, "SELECT * FROM user JOIN pemesanan ON pemesanan.id_user=user.id_user JOIN produk ON produk.id_produk=pemesanan.id_produk JOIN bahan ON bahan.id_bahan=pemesanan.id_bahan WHERE pemesanan.id_pesan='$id_pesan'"); 
+    $tampil = mysqli_query->$db("SELECT * FROM user JOIN pemesanan ON pemesanan.id_user=user.id_user JOIN produk ON produk.id_produk=pemesanan.id_produk JOIN bahan ON bahan.id_bahan=pemesanan.id_bahan WHERE pemesanan.id_pesan='$id_pesan'"); 
     $no = 1;
     while ($ambil = mysqli_fetch_array($tampil)) {
 ?>
@@ -96,8 +96,8 @@ include '../koneksi.php';
             <tbody>
             <?php
               include '../koneksi.php';
-              $tampil = mysqli_query($db, "SELECT * FROM user JOIN pemesanan ON pemesanan.id_user=user.id_user JOIN ukuran ON pemesanan.id_ukuran=ukuran.id_ukuran where pemesanan.id_pesan='$id_pesan'");
-              while ($ambil = mysqli_fetch_array($tampil)) {
+              $tampil = mysqli_query->$db("SELECT * FROM user JOIN pemesanan ON pemesanan.id_user=user.id_user JOIN ukuran ON pemesanan.id_ukuran=ukuran.id_ukuran where pemesanan.id_pesan='$id_pesan'");
+              while ($ambil = mysqli_fetch_array->$tampil) {
                 $id_pesan = $ambil['id_pesan'];
                 $small = $ambil['small'];
                 $medium = $ambil['medium'];

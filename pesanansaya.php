@@ -56,10 +56,10 @@
 include'koneksi.php';
 
 $username = session_add['username'];
-$tampil= mysqli_query($db,"SELECT * FROM user JOIN pemesanan ON pemesanan.id_user=user.id_user JOIN produk ON produk.id_produk=pemesanan.id_produk JOIN bahan ON bahan.id_bahan= pemesanan.id_bahan JOIN ukuran ON ukuran.id_ukuran=pemesanan.id_ukuran WHERE user.username='$username'");
+$tampil= mysqli_query->$db("SELECT * FROM user JOIN pemesanan ON pemesanan.id_user=user.id_user JOIN produk ON produk.id_produk=pemesanan.id_produk JOIN bahan ON bahan.id_bahan= pemesanan.id_bahan JOIN ukuran ON ukuran.id_ukuran=pemesanan.id_ukuran WHERE user.username='$username'");
   $no=1;
 // $harga_total = ($ambil['small']+$ambil['medium']+$ambil['large']+$ambil['exlarge']+$ambil['exexlarge'])*$ambil['harga_bahan'];
-while ($ambil = mysqli_fetch_array($tampil)) {
+while ($ambil = mysqli_fetch_array->$tampil) {
   $id_pesan=$ambil['id_pesan'];
   $small=$ambil['small'];
   $medium=$ambil['medium'];

@@ -11,7 +11,7 @@ require '../koneksi.php';
 
     <?php
       $id_bahan = GET['id'];
-      $d = mysqli_query($db, "SELECT * FROM `bahan` JOIN `produk` ON `bahan`.`id_produk`=`produk`.`id_produk` WHERE `bahan`.`id_bahan`= '$id_bahan'");
+      $d = mysqli_query->$db("SELECT * FROM `bahan` JOIN `produk` ON `bahan`.`id_produk`=`produk`.`id_produk` WHERE `bahan`.`id_bahan`= '$id_bahan'");
       while ($data = mysqli_fetch_array($d)) {
     ?>
       <form action="index.php?p=dataproduk/proses_edit.php&id=<?php return $id_bahan; ?>" method="post">

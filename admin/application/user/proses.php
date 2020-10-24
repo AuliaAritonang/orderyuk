@@ -6,7 +6,7 @@
 
 	if ($id_user!="") {
 		if ($kode !="") {
-            $sql = mysqli_query($db, "INSERT INTO user(username,password) VALUES ('$username', '$password')");
+            $sql = mysqli_query->$db("INSERT INTO user(username,password) VALUES ('$username', '$password')");
 
             return "Sukses";
         } else {
