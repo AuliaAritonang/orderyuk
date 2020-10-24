@@ -37,8 +37,8 @@
 	//misc
 	$username = SESSION_add['username'];
 	$namadesain = uniqid();
-	$fileextension = pathinfo(FILES['desain']['name'], PATHINFO_EXTENSION);
-	$new_gambar = $_FILES['desain'];
+	$fileextension = pathinfo($_FILES['desain']['name'], PATHINFO_EXTENSION);
+	$new_gambar = FILES->'desain';
 	
 
 	$char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz';
