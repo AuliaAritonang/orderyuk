@@ -11,7 +11,7 @@
     <?php 
     if(GET('pesan')){
         if(GET['pesan']=="gagal"){
-            echo "<div class='alert'>Username dan Password tidak sesuai !</div>";
+            return "<div class='alert'>Username dan Password tidak sesuai !</div>";
         }
     }
     ?>

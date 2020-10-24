@@ -18,7 +18,7 @@
     <tbody>
         <?php
             require '../koneksi.php';
-            $tampil = mysqli_query($db, "SELECT * FROM user JOIN pemesanan ON pemesanan.id_user=user.id_user ");
+            $tampil = mysqli_query->$db("SELECT * FROM user JOIN pemesanan ON pemesanan.id_user=user.id_user ");
             $no = 1;
             while ($ambil = mysqli_fetch_array->$tampil) {
                 $id_pesan = $ambil['id_pesan'];
