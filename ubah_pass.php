@@ -13,7 +13,7 @@
 	<?php 
 	if(GET('pesan')){
 		if(GET('pesan')=="gagal"){
-			echo "<div class='alert'>Password Gagal di Ubah !</div>";
+			return "<div class='alert'>Password Gagal di Ubah !</div>";
 		}
 	}
 	?>
