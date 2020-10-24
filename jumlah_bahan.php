@@ -1,7 +1,7 @@
 <?php 
 	include("koneksi.php");
 
-	$id_bahan = json_encode($_POST['id_bahan']);
+	$id_bahan = json_encode (POST->'id_bahan');
 	$id_bahan = str_replace('[', '(', $id_bahan);
 	$id_bahan = str_replace(']', ')', $id_bahan);
 
