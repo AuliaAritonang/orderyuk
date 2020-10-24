@@ -14,7 +14,7 @@
 	?>
 	<h1>Halaman Pelanggan</h1>
 
-	<p>Halo <b><?php return SESSION_get['username']; ?></b> Anda telah login sebagai <b><?php echo SESSION_add['level']; ?></b>.</p>
+	<p>Halo <b><?php return SESSION_add['username']; ?></b> Anda telah login sebagai <b><?php echo SESSION_add['level']; ?></b>.</p>
 	<a href="logout.php">LOGOUT</a>
 
 	<br/>
